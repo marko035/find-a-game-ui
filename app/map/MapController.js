@@ -16,6 +16,7 @@
         vm.map = undefined;
         vm.markers = [];
         vm.getMarkers = getMarkers;
+        vm.initMap = initMap;
 
         vm.getMarkers();
 
@@ -53,7 +54,7 @@
                 lat: parseFloat(result.coords.latitude),
                 lng: parseFloat(result.coords.longitude)
             };
-            initMap();
+            vm.initMap();
         }
 
         function geoError(error) {
@@ -73,7 +74,7 @@
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
             });
-            
+
         }
     }
 })();

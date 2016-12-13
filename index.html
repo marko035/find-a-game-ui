@@ -8,22 +8,30 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <title>Find A Game</title>
 </head>
-<body ng-app="mainApp">
+<body ng-app="mainApp" ng-controller="MapController as map">
 <!--
   Your HTML content here
 -->
 
-<div class="jumbotron text-center">
+<div class="container-fluid text-center header">
     <h1>Find a Game</h1>
     <p>Here you can find nearby games</p>
+    <form class="form-inline">
+        <div class="input-group">
+            <input class="form-control" size="50" placeholder="Search location" id="searchBox">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-danger" ng-click="map.findLocation()">Search</button>
+            </div>
+        </div>
+    </form>
 </div>
 
 <div class="container-fluid map-container">
-    <div class="row" id="map" ng-controller="MapController"></div>
+    <div class="row" id="map"></div>
 </div>
 
 <!-- Google Map Api -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7U-P8Rn4Jb0uLok3mP2RhuvSP1QsRGQg"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7U-P8Rn4Jb0uLok3mP2RhuvSP1QsRGQg&libraries=places"></script>
 
 <!-- Bootstrap -->
 <!-- jQuery library -->
