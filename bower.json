@@ -2,7 +2,8 @@
   "name": "Find a Game",
   "homepage": "https://github.com/marko035/find-a-game-ui",
   "authors": [
-    "Marko <nikolicmarko035@gmail.com>"
+    "Marko <nikolicmarko035@gmail.com>",
+    "Glisa <vladimir.glisovic@hotmail.com>"
   ],
   "description": "",
   "main": "index.html",
