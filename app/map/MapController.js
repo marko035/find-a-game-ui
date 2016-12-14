@@ -5,9 +5,9 @@
         .module('mainApp')
         .controller('MapController', MapController)
 
-    MapController.$inject = ['$http'];
+    MapController.$inject = ['$http', 'Events'];
 
-    function MapController($http) {
+    function MapController($http, Events) {
         var vm = this;
         vm.geoLocation = {};
         vm.getLocation = getLocation;
@@ -62,17 +62,10 @@
         }
 
         function getMarkers() {
-            // Simple GET request example:
-            $http({
-                method: 'GET',
-                url: '/findAgame/api/Events/listEvents'
-            }).then(function successCallback(response) {
+            Events.getEvents().then(function (response) {
                 if (response.data.success) {
                     vm.markers = response.data.response;
                 }
-            }, function errorCallback(response) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
             });
 
         }
