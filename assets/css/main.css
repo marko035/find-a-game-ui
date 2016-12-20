@@ -18,7 +18,7 @@
 }
 
 .main-header-container {
-    padding-top: 10px;
+    padding: 10px 0 10px 0;
 }
 
 .navbar-inverse {
@@ -63,10 +63,6 @@
         margin-bottom: 10px;
     }
 
-    /*.header-login {*/
-        /*text-align: center;*/
-    /*}*/
-
     #colorMe navbar-nav {
         text-align: center;
         margin-top: 10px;
@@ -76,10 +72,6 @@
     .header-logo {
         text-align: left;
     }
-
-    /*.header-login {*/
-        /*float: right;*/
-    /*}*/
 }
 
 #loginList li a:nth-child(1){
@@ -139,4 +131,40 @@
         display: flex;
         justify-content: center;
     }
+}
+
+.navbar-inverse .navbar-collapse {
+    border: none;
+    padding-bottom: 10px;
+}
+
+.item-center {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.navbar-inverse {
+    min-height: 20px;
+}
+
+.navbar-toggle {
+    padding: 5px 8px;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #14b1f3;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #14b1f3;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #14b1f3;
+}
+
+.map-container {
+    margin: 0;
+    padding: 0;
 }
